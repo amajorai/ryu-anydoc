@@ -1,0 +1,31 @@
+[package]
+name = "ryu-anydoc"
+version = "0.2.3"
+edition = "2021"
+rust-version = "1.88"
+license = "Apache-2.0"
+description = "Standalone AnyDoc document extraction service for Ryu, with a swappable document.parse sidecar and a versioned API."
+repository = "https://github.com/amajorai/ryu"
+
+[[bin]]
+name = "ryu-anydoc"
+path = "src/main.rs"
+
+[lib]
+name = "ryu_anydoc"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1"
+anydoc = "0.2.4"
+axum = "0.7"
+base64 = "0.22"
+chrono = "0.4"
+ryu-sidecar-runtime = { path = "../crates/core/sidecar-runtime", version = "0.2.3" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1", features = ["v4"] }
