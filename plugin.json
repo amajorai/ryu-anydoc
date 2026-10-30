@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.anydoc",
+  "version": "0.2.3",
+  "description": "Document extraction through Firecrawl's MIT-licensed AnyDoc Rust library. It converts Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and text-based PDF files into GitHub-Flavored Markdown through the swappable `document.parse` capability. The local backend is fast and has no model or native-tool download, but it does not OCR scanned pages or fetch URLs. The same out-of-process backend also exposes an API-key-authenticated `/v1/extract` service for direct deployments.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-anydoc",
+  "repository": "https://github.com/amajorai/ryu-anydoc",
+  "keywords": [
+    "document",
+    "parse",
+    "pdf",
+    "docx",
+    "pptx",
+    "xlsx",
+    "markdown",
+    "extraction",
+    "api"
+  ],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/anydoc",
+      "displayName": "AnyDoc"
+    }
+  }
+}
